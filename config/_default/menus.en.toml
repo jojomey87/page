@@ -1,0 +1,23 @@
+[[main]]
+none = "none"
+
+[[main]]
+name = "Coaching"
+pageRef = "Coaching"
+identifier = "LWej27YXOd"
+weight = 9_999
+
+[[footer]]
+none = "none"
+
+[[footer]]
+name = "Impressum"
+pageRef = "impressum.md"
+identifier = "h1tqWQyZ7p"
+weight = 9_999
+
+[[footer]]
+name = "Datenschutz"
+pageRef = "datenschutz.markdown"
+identifier = "97v1XdTRYd"
+weight = 9_999

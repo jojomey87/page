@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dr.-Ing. Johannes Meyer - Science and Coaching</title>
+    <link>http://localhost:65413/</link>
+    <description>Recent content on Dr.-Ing. Johannes Meyer - Science and Coaching</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Dr.-Ing. Johannes Meyer</copyright>
+    <atom:link href="http://localhost:65413/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>http://localhost:65413/datenschutz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:65413/datenschutz/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:65413/impressum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:65413/impressum/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Wissenschaftliche Coachingangebote</title>
+      <link>http://localhost:65413/coaching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:65413/coaching/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:65413/coaching/feature.png" />
+    </item>
+    
+  </channel>
+</rss>
