@@ -1,11 +1,7 @@
 [[main]]
 none = "none"
 
-[[main]]
-name = "Coaching"
-pageRef = "Coaching"
-identifier = "LWej27YXOd"
-weight = 9_999
+
 
 [[main]]
   name = "Publications"
