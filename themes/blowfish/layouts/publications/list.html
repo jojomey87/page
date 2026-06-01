@@ -1,0 +1,108 @@
+{{/* layouts/publications/list.html
+     Publications list grouped by year — Hugo Blowfish theme
+     Place this file at: layouts/publications/list.html
+*/}}
+
+{{ define "main" }}
+<article>
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+  </header>
+
+  {{/* Collect all pages, sort by date descending */}}
+  {{ $pubs := .Pages.ByDate.Reverse }}
+
+  {{/* Group by year */}}
+  {{ range ($pubs.GroupByDate "2006") }}
+  <section class="pub-year-group">
+    <h2 class="pub-year">{{ .Key }}</h2>
+
+    <ul class="pub-list">
+      {{ range .Pages }}
+      {{ $params := .Params }}
+      <li class="pub-entry">
+
+        <span class="pub-type">{{ $params.publication_type }}</span>
+
+        <p class="pub-title">
+          {{ if $params.doi_url }}
+            <a href="{{ $params.doi_url }}" target="_blank" rel="noopener">{{ .Title }}</a>
+          {{ else }}
+            {{ .Title }}
+          {{ end }}
+        </p>
+
+        <p class="pub-authors">{{ $params.author_list }}</p>
+
+        {{ with $params.venue }}
+        <p class="pub-venue">{{ . }}</p>
+        {{ end }}
+
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+</article>
+
+<style>
+.pub-year-group { margin-bottom: 2.5rem; }
+
+.pub-year {
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pub-entry { line-height: 1.5; }
+
+.pub-type {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.3rem;
+  background: color-mix(in srgb, currentColor 10%, transparent);
+  opacity: 0.75;
+}
+
+.pub-title {
+  margin: 0;
+  font-weight: 500;
+}
+
+.pub-title a {
+  text-decoration: none;
+}
+.pub-title a:hover { text-decoration: underline; }
+
+.pub-authors {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.pub-venue {
+  margin: 0.1rem 0 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.65;
+}
+</style>
+{{ end }}
