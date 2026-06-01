@@ -1,3 +1,8 @@
-baseURL = 'https://jojomey87.github.io/page/'
+# baseURL = 'https://jojomey87.github.io/page/'
+baseURL = 'https://meyerj.de/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Johannes Meyer'
+[[menus.main]]
+  name = "Publications"
+  url = "/publications/"
+  weight = 30

@@ -7,6 +7,11 @@ pageRef = "Coaching"
 identifier = "LWej27YXOd"
 weight = 9_999
 
+[[main]]
+  name = "Publications"
+  url = "/publications/"
+  weight = 30
+
 [[footer]]
 none = "none"
 
