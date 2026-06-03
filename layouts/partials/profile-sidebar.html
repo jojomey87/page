@@ -1,0 +1,36 @@
+{{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
+{{ with .Site.Params.Author }}
+  <div class="rounded-2xl p-5">
+    {{ with .image }}
+      {{ $authorImage := "" }}
+      {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+        {{ $authorImage = resources.GetRemote . }}
+      {{ else }}
+        {{ $authorImage = resources.Get . }}
+      {{ end }}
+      {{ if $authorImage }}
+        {{ if not $disableImageOptimization }}
+          {{ $authorImage = $authorImage.Fill (print "288x288 q" ( $.Site.Params.Author.imagequality | default "96" )) }}
+        {{ end }}
+        <img
+          class="mb-4 h-40 w-40 rounded-full"
+          width="160"
+          height="160"
+          alt="{{ $.Site.Params.Author.name | default "Author" }}"
+          src="{{ $authorImage.RelPermalink }}">
+      {{ end }}
+    {{ end }}
+
+    <h2 class="text-3xl font-extrabold text-neutral-900 dark:text-neutral">{{ .name | default $.Site.Title }}</h2>
+
+    {{ with .headline }}
+      <p class="mt-1 text-lg text-neutral-500 dark:text-neutral-400">{{ . | markdownify }}</p>
+    {{ end }}
+
+    {{ with .bio }}
+      <p class="mt-3 text-base text-neutral-600 dark:text-neutral-300">{{ . | markdownify }}</p>
+    {{ end }}
+
+    {{ partialCached "author-links-sidebar.html" $ }}
+  </div>
+{{ end }}

@@ -1,0 +1,13 @@
+<div class="persistent-layout">
+  <aside class="persistent-sidebar-home">
+    {{ partial "profile-sidebar.html" . }}
+  </aside>
+
+  <section class="persistent-content prose max-w-none dark:prose-invert">
+    {{ .Content }}
+  </section>
+</div>
+
+<section>
+  {{ partial "recent-articles/main.html" . }}
+</section>

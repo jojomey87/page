@@ -21,7 +21,8 @@ advertisement = { }
 defaultBackgroundImage = "."
 
 [header]
-layout = "basic"
+layout = "fixed"
+
 
 [footer]
 showMenu = true

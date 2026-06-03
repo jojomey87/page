@@ -8,6 +8,16 @@ none = "none"
   url = "/publications/"
   weight = 30
 
+[[main]]
+  name = "Events"
+  pageRef = "events.markdown"
+  weight = 40
+
+[[main]]
+  name = "Teaching"
+  pageRef = "teaching.markdown"
+  weight = 50
+
 [[footer]]
 none = "none"
 

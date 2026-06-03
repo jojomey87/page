@@ -1,0 +1,32 @@
+{{ with .Site.Params.Author.links }}
+  <ul class="mt-4 space-y-2 text-left text-base text-neutral-600 dark:text-neutral-300">
+    {{ range . }}
+      {{ $icon := "link" }}
+      {{ $label := "Link" }}
+      {{ $url := "#" }}
+
+      {{ if isset . "icon" }}
+        {{ with index . "icon" }}{{ $icon = . }}{{ end }}
+        {{ with index . "label" }}{{ $label = . }}{{ end }}
+        {{ with index . "url" }}{{ $url = . }}{{ end }}
+      {{ else }}
+        {{ range $name, $value := . }}
+          {{ $icon = $name }}
+          {{ $url = $value }}
+          {{ $label = humanize (replace $name "-" " ") }}
+        {{ end }}
+      {{ end }}
+
+      <li>
+        <a
+          class="inline-flex items-center gap-2 hover:text-primary-700 dark:hover:text-primary-400"
+          href="{{ $url | safeURL }}"
+          {{ if or (strings.HasPrefix $url "http://") (strings.HasPrefix $url "https://") }}target="_blank" rel="me noopener noreferrer"{{ end }}
+          aria-label="{{ $label }}">
+          <span class="inline-flex h-5 w-5 items-center justify-center">{{ partial "icon.html" $icon }}</span>
+          <span>{{ $label }}</span>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

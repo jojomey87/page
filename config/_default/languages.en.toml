@@ -10,6 +10,17 @@ isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
 
-["params.author"]
+[params.author]
 name = "Dr.-Ing. Johannes Meyer"
 image = "sq.png"
+headline = "Computational Imaging"
+bio = "Senior Scientist at Fraunhofer and Lecturer at Karlsruhe Institute of Technology KIT"
+links = [
+	{ icon = "location-dot", label = "Karlsruhe, Germany", url = "https://maps.app.goo.gl/BGRtRhqYfBcq1Fep8" },
+	{ icon = "lightbulb", label = "Fraunhofer IOSB", url = "https://www.iosb.fraunhofer.de/de/kompetenzen/bildauswertung/variable-bildgewinnung.html" },
+    { icon = "graduation-cap", label = "Computational Imaging Lecture", url = "https://computational-imaging.de" },
+	{ icon = "envelope", label = "Email", url = "mailto:jojomey@googlemail.com" },
+	{ icon = "google", label = "Google Scholar", url = "https://scholar.google.com/citations?user=00p1P3AAAAAJ&hl=de" },
+	{ icon = "orcid", label = "ORCID", url = "https://orcid.org/0000-0002-0415-2525" },	
+	#{ icon = "bluesky", label = "Bluesky", url = "https://bsky.app/" },
+]

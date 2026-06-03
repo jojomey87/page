@@ -2,6 +2,8 @@
 showDate: false
 showWordCount: false
 showReadingTime: false
+showAuthor: false
+showPagination: false
 ---
 
 # Datenschutz
