@@ -5,7 +5,6 @@ html {
 
 body {
   overflow-y: scroll;
-  padding-bottom: 4rem;
 }
 
 /* ===== Layout: Shared Profile + Content ===== */
@@ -64,25 +63,7 @@ body {
   display: none;
 }
 
-/* ===== Footer: Opaque Fixed + Centered Menu ===== */
-#site-footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 60;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-top: 1px solid rgba(115, 115, 115, 0.35);
-  background: #ffffff;
-  backdrop-filter: none;
-}
-
-#site-footer > .flex.items-center.justify-between {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
+/* ===== Footer: Centered Menu ===== */
 
 #site-footer nav {
   justify-content: center;
@@ -95,11 +76,6 @@ body {
 }
 
 /* ===== Dark Mode Overrides ===== */
-html.dark #site-footer {
-  background: #171717;
-  border-top-color: rgba(163, 163, 163, 0.35);
-}
-
 html.dark .fixed.inset-x-0 {
   background: #171717;
   border-bottom-color: rgba(163, 163, 163, 0.35);
